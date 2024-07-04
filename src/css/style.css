@@ -14,7 +14,7 @@
 }
 
 .color-primary {
-  color: #fc4747;
+  color: #fc4747 !important;
 }
 
 .color-gray {
@@ -276,7 +276,6 @@
 .container {
   max-width: 1216px;
   margin: 0 auto;
-  padding: 128px 24px;
 }
 .container::after {
   content: "";
@@ -463,8 +462,8 @@
 }
 
 .logo {
-  max-width: 64px;
-  min-width: 48px;
+  max-width: 32px;
+  min-width: 24px;
 }
 
 .profile {
@@ -520,6 +519,14 @@
   border: 2px solid #fc4747;
   border-radius: 4px;
   background-color: rgba(27, 105, 210, 0.2);
+}
+
+.bg-black-20 {
+  background: #161d2f;
+  border-radius: 20px;
+}
+.bg-black-20 input {
+  background: #161d2f !important;
 }
 
 .s-0 {
@@ -1682,12 +1689,12 @@ textarea {
   font-size: 16px;
   line-height: 26px;
   font-weight: 200;
-  cursor: pointer;
 }
 input:focus,
 select:focus,
 option:focus,
 textarea:focus {
+  outline: none;
   border-bottom: 1px solid #ffffff;
 }
 
@@ -1700,11 +1707,25 @@ option {
   height: 48px;
 }
 
+.btn-search {
+  cursor: pointer;
+  height: 48px;
+  width: 56px;
+  background-image: url("../svg/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #10141e;
+  border: 0;
+  border-radius: 4px;
+  transform: translate3d(6px, 0, 0);
+}
+
 .search-bar {
   padding: 4px 0px;
   outline: none;
   color: #ffffff;
 }
+
 .search-bar.active {
   border-bottom: 1px solid #5a698f;
 }

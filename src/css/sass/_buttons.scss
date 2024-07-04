@@ -35,9 +35,9 @@ textarea {
   color: $white;
   @include typeface-2(p3, desktop);
 
-  cursor: pointer;
 
   &:focus {
+    outline: none;
     border-bottom: 1px solid $white;
   }
 }
@@ -60,7 +60,7 @@ option {
   background-repeat: no-repeat; // ñ repetir icone
   background-position: center center; // centralizar nos dois eixos
 
-  background-color: $dark-10;
+  background-color: $black-10;
   border: 0;
   border-radius: 4px;
 

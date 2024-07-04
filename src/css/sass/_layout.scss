@@ -87,7 +87,7 @@ $gutter: 32px;
   max-width: $container-l; // Definindo tamanho padrão para container.
   margin: 0 auto; // Centralizando container.
 
-  padding: 128px 24px; // Espaçamento-> eixo y: 128px - eixo x: 24px.
+  // padding: 128px 24px; // Espaçamento-> eixo y: 128px - eixo x: 24px.
 
   // clearfix
   &::after {
@@ -306,8 +306,8 @@ $gutter: 32px;
 
 // Tamanhos para logos
 .logo {
-  max-width: 64px;
-  min-width: 48px;
+  max-width: 32px;
+  min-width: 24px;
 }
 
 // Definições para fotos de profile (avatar).
@@ -370,3 +370,12 @@ $gutter: 32px;
 }
 
 // <===================== FIM DA CONFIGURAÇÃO PADRÃO =====================>
+
+.bg-black-20 {
+  background: $black-20;
+  border-radius: 20px;
+
+  input {
+    background: $black-20 !important;
+  }
+}
