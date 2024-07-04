@@ -8,7 +8,7 @@ a {
   // fonte: 'p3' | tela: 'desktop'
   @include typeface-2(p3, desktop);
 
-  color: $white-dark;
+  color: $white;
 
   transition: 0.3s ease; // tempo de transição para efeito hover
 
@@ -19,7 +19,7 @@ a {
 
 // configurando cor acentuada p/ inputs (cor de caixinha marcada)
 input {
-  accent-color: $primary-normal;
+  accent-color: $brand-color;
 }
 
 // configurando inputs
@@ -28,12 +28,22 @@ select,
 option,
 textarea {
   padding: 10px 12px;
-  background-color: $black-light;
+  background-color: $black-10;
   border: 0; // remover bordas
-  border-radius: 4px;
+  border-bottom: 1px solid $black-30;
   width: 100%; // sempre ocupar a largura total do 'pai'
-  color: $white-light;
+  color: $white;
   @include typeface-2(p3, desktop);
+
+  cursor: pointer;
+
+  &:focus {
+    border-bottom: 1px solid $white;
+  }
+}
+
+input.error {
+  border-bottom: 1px solid $red-normal;
 }
 
 select,
@@ -41,18 +51,41 @@ option {
   height: 48px;
 }
 
+.btn-search {
+  cursor: pointer;
+  height: 48px;
+  width: 56px;
+
+  background-image: url("../svg/icon-search.svg");
+  background-repeat: no-repeat; // ñ repetir icone
+  background-position: center center; // centralizar nos dois eixos
+
+  background-color: $dark-10;
+  border: 0;
+  border-radius: 4px;
+
+  // colar o elemento (botao) no input
+  transform: translate3d(6px, 0, 0); // descer 6px no eixo y
+}
+
+.search-bar {
+  padding: 4px 0px;
+  outline: none;
+
+  color: $white;
+}
+.search-bar.active {
+  border-bottom: 1px solid $black-30;
+}
+
 // configurando botão principal
 .btn {
   display: inline-block;
   padding: 8px 24px;
 
-// use cores desejada...
-  color: $white-light;
-  background: linear-gradient(
-    224.78deg,
-    #5390e3 8.12%,
-    #1357b3 92.21%
-  ) !important;
+  // use cores desejada...
+  color: $white;
+  background: $brand-color;
 
   border-radius: 4px;
   border: 0;
@@ -63,7 +96,7 @@ option {
 
   transition: 0.3s ease;
   &:hover {
-    opacity: 0.7; // aplicar opacidade
+    background: $white;
+    color: $black-10;
   }
 }
-

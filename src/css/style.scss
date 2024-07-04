@@ -16,7 +16,7 @@ html {
 body {
   width: 100%;
 
-  background-color: $black-dark;
+  background-color: $black-10;
 
   &::-webkit-scrollbar {
     padding-right: 4px;
@@ -26,7 +26,7 @@ body {
 
   &::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    background: $black-light;
+    background: $black-30;
   }
 }
 
@@ -51,4 +51,3 @@ img {
 @import "sass/menu";
 @import "sass/icons";
 @import "sass/buttons";
-@import "sass/footer";

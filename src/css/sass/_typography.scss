@@ -1,117 +1,117 @@
 // Tipografia d projeto
 
 // Importar fonte desejado: Não esquecer de alterar o font family abaixo!
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 // Responsividade das fontes para cada tipo de tela, de forma automática.
 
-// As funções typeface-1 e typeface-2 são responsáveis por setar o tamnanho correto da fontes para cada tipo de dispositivo. 
+// As funções typeface-1 e typeface-2 são responsáveis por setar o tamnanho correto da fontes para cada tipo de dispositivo.
 
 @mixin typeface-1($size, $device: desktop) {
   @if $size == h0 and $device == desktop {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 120px;
     line-height: 120%;
     font-weight: 500;
   } @else if $size == h0 and $device == mobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 88px;
     line-height: 120%;
     font-weight: 500;
   } @else if $size == h0 and $device == smallmobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 32px;
     line-height: 120%;
     font-weight: 500;
   }
 
   @if $size == h1 and $device == desktop {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 80px;
     line-height: 100%;
     font-weight: 500;
   } @else if $size == h1 and $device == mobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 56px;
     line-height: 110%;
     font-weight: 500;
   } @else if $size == h1 and $device == smallmobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 48px;
     line-height: 120%;
     font-weight: 500;
   } @else if $size == h2 and $device == desktop {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 64px;
     line-height: 110%;
     font-weight: 300;
   } @else if $size == h2 and $device == mobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 40px;
     line-height: 120%;
     font-weight: 300;
   } @else if $size == h2 and $device == smallmobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 36px;
     line-height: 120%;
     font-weight: 300;
   } @else if $size == h3 and $device == desktop {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 48px;
     line-height: 120%;
     font-weight: 300;
   } @else if $size == h3 and $device == mobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 32px;
     line-height: 120%;
     font-weight: 300;
   } @else if $size == h3 and $device == smallmobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 28px;
     line-height: 130%;
     font-weight: 300;
   } @else if $size == h4 and $device == desktop {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 36px;
     line-height: 120%;
     font-weight: 300;
   } @else if $size == h4 and $device == mobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 28px;
     line-height: 130%;
     font-weight: 300;
   } @else if $size == h4 and $device == smallmobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 20px;
     line-height: 140%;
     font-weight: 300;
   } @else if $size == h5 and $device == desktop {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 24px;
     line-height: 140%;
     font-weight: 300;
   } @else if $size == h5 and $device == mobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 20px;
     line-height: 140%;
     font-weight: 300;
   } @else if $size == h6 and $device == desktop {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 18px;
     line-height: 150%;
     font-weight: 100;
   } @else if $size == h6 and $device == mobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 16px;
     line-height: 150%;
     font-weight: 100;
   } @else if $size == h7 and $device == desktop {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 14px;
     line-height: 150%;
     font-weight: 100;
   } @else if $size == h7 and $device == mobile {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-size: 14px;
     line-height: 150%;
     font-weight: 100;
@@ -119,7 +119,7 @@
 }
 
 @mixin typeface-2($size: p2, $device: desktop) {
-  font-family: "Rubik", sans-serif;
+  font-family: "Outfit", sans-serif;
 
   @if $size == p1 and $device == desktop {
     font-size: 18px;
@@ -183,7 +183,7 @@
 }
 
 h1 {
-  color: $white-dark;
+  color: $white;
   z-index: 5;
   @include typeface-1(h1, desktop);
   @include responsive(s) {
@@ -195,7 +195,7 @@ h1 {
 }
 
 h2 {
-  color: $white-dark;
+  color: $white;
   @include typeface-1(h2, desktop);
   @include responsive(s) {
     @include typeface-1(h2, mobile);
@@ -206,7 +206,7 @@ h2 {
 }
 
 h3 {
-  color: $white-dark;
+  color: $white;
   @include typeface-1(h3, desktop);
   @include responsive(s) {
     @include typeface-1(h3, mobile);
@@ -217,7 +217,7 @@ h3 {
 }
 
 h4 {
-  color: $white-dark;
+  color: $white;
   @include typeface-1(h4, desktop);
   @include responsive(s) {
     @include typeface-1(h4, mobile);
@@ -228,7 +228,7 @@ h4 {
 }
 
 h5 {
-  color: $white-dark;
+  color: $white;
   @include typeface-1(h5, desktop);
   @include responsive(s) {
     @include typeface-1(h5, mobile);
@@ -236,7 +236,7 @@ h5 {
 }
 
 h6 {
-  color: $white-dark;
+  color: $white;
 
   @include typeface-1(h6, desktop);
   @include responsive(s) {
@@ -316,18 +316,18 @@ p {
 
 .bold {
   font-weight: bold;
-  color: $white-dark;
+  color: $white;
 }
 
 span {
   position: relative;
   display: inline-block;
 
-  color: $primary-normal;
+  color: $brand-color;
 }
 
 .letter-h1 {
-  color: $white-normal;
+  color: $white;
   letter-spacing: 1px;
   text-transform: none;
   @include typeface-1(h1, desktop);
@@ -337,7 +337,7 @@ span {
 }
 
 strong {
-  color: $black-dark;
+  color: $black-10;
   @include typeface-2(p2, desktop);
   @include responsive(s) {
     @include typeface-2(p2, mobile);
@@ -361,7 +361,7 @@ b {
 }
 
 .h-xl {
-  color: $white-normal;
+  color: $white;
 
   @include typeface-1(h0, desktop);
   font-size: 240px;
@@ -373,7 +373,7 @@ b {
 }
 
 .h-l {
-  color: $white-normal;
+  color: $white;
 
   @include typeface-1(h0, desktop);
   font-size: 144px;

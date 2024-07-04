@@ -267,41 +267,41 @@ $gutter: 32px;
 
 // Borda abaixo do elemento.
 .bb-black {
-  border-bottom: 1px solid $black-light;
+  border-bottom: 1px solid $black-30;
 }
 // Borda acima do elemento.
 .bt-black {
-  border-top: 1px solid $black-light;
+  border-top: 1px solid $black-30;
 }
 // Borda a esquerda do elemento.
 .bl-black {
-  border-left: 1px solid $black-light;
+  border-left: 1px solid $black-30;
 }
 // Borda a direita do elemento.
 .br-black {
-  border-right: 1px solid $black-light;
+  border-right: 1px solid $black-30;
 }
 
 // Borda MAIS GROSSA abaixo do elemento.
 .bb-gray {
-  border-bottom: 2px solid $black-normal;
+  border-bottom: 2px solid $black-20;
 }
 // Borda MAIS GROSSA acima do elemento.
 .bt-gray {
-  border-top: 2px solid $black-normal;
+  border-top: 2px solid $black-20;
 }
 // Borda MAIS GROSSA a esquerda do elemento.
 .bl-gray {
-  border-left: 2px solid $black-normal;
+  border-left: 2px solid $black-20;
 }
 // Borda MAIS GROSSA a direita do elemento.
 .br-gray {
-  border-right: 2px solid $black-normal;
+  border-right: 2px solid $black-20;
 }
 
 // Backgrounds
 .bg-gray {
-  background-color: $black-normal;
+  background-color: $black-20;
 }
 
 // Tamanhos para logos
@@ -325,10 +325,10 @@ $gutter: 32px;
 }
 .profile-img {
   border-radius: 50%;
-  border: 2px solid $primary-normal;
+  border: 2px solid $brand-color;
 }
 .card {
-  border: 1px solid $black-light;
+  border: 1px solid $black-30;
   border-radius: 4px;
   background-color: rgba(15, 20, 31, 0);
 
@@ -363,7 +363,7 @@ $gutter: 32px;
   background-color: rgba(255, 206, 82, 0.2);
 }
 .card-info {
-  border: 2px solid $primary-normal;
+  border: 2px solid $brand-color;
   border-radius: 4px;
 
   background-color: rgba(27, 105, 210, 0.2);
