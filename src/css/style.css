@@ -1625,6 +1625,10 @@ img {
   }
 }
 
+.hidden-content {
+  display: none;
+}
+
 .icon {
   max-width: 64px;
   transition: 0.5s ease;
