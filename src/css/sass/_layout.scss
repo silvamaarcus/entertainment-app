@@ -379,4 +379,8 @@ $gutter: 32px;
   input {
     background: $black-20 !important;
   }
+
+  @include responsive(s) {
+    border-radius: 0;
+  }
 }

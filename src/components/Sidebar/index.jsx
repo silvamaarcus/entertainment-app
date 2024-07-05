@@ -26,13 +26,13 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="flex">
-        <section className="bg-black-20 flex-space w-100" id="sidebar">
+      <div className="flex change-direction">
+        <section className="bg-black-20 flex-space " id="sidebar">
           <div className="mt-5">
-            <a href="" className=" flex-center-column">
+            <a href="/" className=" flex-center-column">
               <img src={logo} alt="Entertaiment App" className="logo" />
             </a>
-            <div className="mt-7 flex-center-column gap-5">
+            <div className="mt-7 flex-center-column gap-5 links">
               <a onClick={() => handleContentChange("home")}>
                 <img src={icon_main} alt="Home" />
               </a>
