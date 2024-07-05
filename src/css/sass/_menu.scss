@@ -1,0 +1,53 @@
+// .sidebar {
+//   height: 80vh;
+//   width: 8%;
+//   background-color: $black-20;
+//   padding-top: 20px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// .content {
+//   flex-grow: 1;
+//   padding: 20px;
+// }
+
+// //  APPs
+// .submenu {
+//   ul {
+//     list-style: none;
+//     padding-left: 40px;
+
+//     li {
+//       padding: 10px 0;
+//       position: relative;
+
+//       &::before {
+//         position: absolute;
+//         display: block;
+//         content: "";
+//         height: 100%;
+//         left: -30px;
+//         top: 50%;
+
+//         transform: translate(-50%, -50%);
+//       }
+//     }
+//   }
+// }
+
+#sidebar {
+  flex-direction: column;
+
+  height: 100vh;
+  max-width: 96px;
+
+  margin: 32px;
+
+  overflow: hidden;
+
+  @include responsive(s) {
+    display: none;
+  }
+}

@@ -1,9 +1,11 @@
-import Login from "./pages/Login";
+import Sidebar from "./components/Sidebar";
+// import Login from "./pages/Login";
 
 function App() {
   return (
     <>
-      <Login />
+      <Sidebar />
+      {/* <Login /> */}
     </>
   );
 }

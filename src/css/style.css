@@ -470,6 +470,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  border: 2px solid #ffffff;
 }
 
 .profile-big {
@@ -1609,6 +1610,19 @@ body::-webkit-scrollbar-thumb {
 svg,
 img {
   width: 100%;
+}
+
+#sidebar {
+  flex-direction: column;
+  height: 100vh;
+  max-width: 96px;
+  margin: 32px;
+  overflow: hidden;
+}
+@media screen and (max-width: 960px) {
+  #sidebar {
+    display: none;
+  }
 }
 
 .icon {
