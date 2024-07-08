@@ -27,9 +27,9 @@ const Sidebar = () => {
   return (
     <>
       <div className="flex change-direction">
-        <section className="bg-black-20 flex-space " id="sidebar">
-          <div className="mt-5">
-            <a href="/" className=" flex-center-column">
+        <section className="bg-black-20 flex-space" id="sidebar">
+          <div className="mt-5 menu-bar-mobile fix-margin-mobile">
+            <a href="/" className="flex-center-column">
               <img src={logo} alt="Entertaiment App" className="logo" />
             </a>
             <div className="mt-7 flex-center-column gap-5 links">
@@ -48,7 +48,7 @@ const Sidebar = () => {
             </div>
           </div>
 
-          <div className="mb-5 flex-center">
+          <div className="mb-5 flex-center fix-margin-mobile">
             <div className="profile">
               <img src={user} alt="User" />
             </div>

@@ -47,17 +47,42 @@
 
   overflow: hidden;
 
+  @include responsive(m) {
+    .menu-bar-mobile {
+      width: 60%;
+      justify-content: space-between !important;
+    }
+  }
+
   @include responsive(s) {
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+
+    .menu-bar-mobile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .links {
-      justify-content: flex-end;
+      justify-content: center;
       align-items: center;
       flex-direction: row;
 
       margin-top: 0 !important;
+      margin-left: 56px;
+
+      gap: 24px !important;
+    }
+
+    .fix-margin-mobile {
+      @include responsive(s) {
+        margin: 0px !important;
+      }
     }
 
     margin: 0;
-    // padding-top: 8px;
 
     flex-direction: row !important;
     max-height: 72px;
