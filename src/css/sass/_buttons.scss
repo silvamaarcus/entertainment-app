@@ -35,7 +35,6 @@ textarea {
   color: $white;
   @include typeface-2(p3, desktop);
 
-
   &:focus {
     outline: none;
     border-bottom: 1px solid $white;
@@ -56,14 +55,12 @@ option {
   height: 48px;
   width: 56px;
 
-  background-image: url("../svg/icon-search.svg");
+  background-image: url("../src/assets/svg/icon-search.svg");
   background-repeat: no-repeat; // ñ repetir icone
   background-position: center center; // centralizar nos dois eixos
 
   background-color: $black-10;
   border: 0;
-  border-radius: 4px;
-
   // colar o elemento (botao) no input
   transform: translate3d(6px, 0, 0); // descer 6px no eixo y
 }
@@ -76,6 +73,10 @@ option {
 }
 .search-bar.active {
   border-bottom: 1px solid $black-30;
+}
+
+.border-off {
+  border: 0 !important;
 }
 
 // configurando botão principal

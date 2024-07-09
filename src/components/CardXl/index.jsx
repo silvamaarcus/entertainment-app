@@ -1,4 +1,5 @@
 import cover from "../../assets/img/cover-movie.png";
+import bookmark_save from "../../assets/svg/bookmark.svg"
 
 const CardXl = () => {
   return (
@@ -9,8 +10,10 @@ const CardXl = () => {
           style={{ backgroundImage: `url(${cover})` }}
         >
           <div className="card-overlay flex-space">
-            <div className="flex-end-row mt-2 mr-4 w-auto">
-              <a href="">Link</a>
+            <div className="w-100 mt-2 pr-3">
+              <a href="" className="flex-end-row">
+                <img src={bookmark_save} alt="Save" className="icon-s"/>
+              </a>
             </div>
             <div className="card-content">
               <p className="color-white">Lorem ipsum dolor sit ame.</p>

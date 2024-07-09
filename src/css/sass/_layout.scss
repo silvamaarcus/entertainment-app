@@ -100,7 +100,7 @@ $gutter: 32px;
   @include responsive(s) {
     flex-direction: column;
 
-    padding: 96px 16px;
+    padding: 24px 16px;
   }
 }
 
@@ -385,11 +385,29 @@ $gutter: 32px;
   }
 }
 
+// Carousel Trending
+.carousel-container {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos móveis */
+  cursor: grab;
+  scrollbar-width: none; /* Para navegadores Firefox */
+  -ms-overflow-style: none; /* Para navegadores Internet Explorer e Edge */
+  scroll-behavior: smooth; /* Rola suavemente */
+
+  .carousel-item {
+    scroll-snap-align: start;
+  }
+}
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
 // Card Big - Trending
 
 .card-big {
-  width: 470px; /* Largura do card */
-  height: 230px; /* Altura do card */
+  width: 470px;
+  height: 230px;
   border-radius: 8px;
   overflow: hidden;
   // margin: 20px;
@@ -398,6 +416,11 @@ $gutter: 32px;
   background-size: cover;
   background-position: center;
   position: relative;
+
+  @include responsive(s) {
+    width: 240px;
+    height: 140px;
+  }
 
   .card-image {
     width: 100%;
@@ -413,12 +436,7 @@ $gutter: 32px;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(
-      0,
-      0,
-      0,
-      0.3
-    ); /* Fundo semi-transparente para destacar os elementos */
+    background: rgba(0, 0, 0, 0.3);
     // display: flex;
     // align-items: flex-end;
     flex-direction: column;

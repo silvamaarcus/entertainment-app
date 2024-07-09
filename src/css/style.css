@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 * {
   padding: 0;
@@ -285,7 +286,7 @@
 @media screen and (max-width: 960px) {
   .container {
     flex-direction: column;
-    padding: 96px 16px;
+    padding: 24px 16px;
   }
 }
 
@@ -535,9 +536,26 @@
   }
 }
 
+.carousel-container {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos móveis */
+  cursor: grab;
+  scrollbar-width: none; /* Para navegadores Firefox */
+  -ms-overflow-style: none; /* Para navegadores Internet Explorer e Edge */
+  scroll-behavior: smooth; /* Rola suavemente */
+}
+.carousel-container .carousel-item {
+  scroll-snap-align: start;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
 .card-big {
-  width: 470px; /* Largura do card */
-  height: 230px; /* Altura do card */
+  width: 470px;
+  height: 230px;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
@@ -545,6 +563,12 @@
   background-size: cover;
   background-position: center;
   position: relative;
+}
+@media screen and (max-width: 960px) {
+  .card-big {
+    width: 240px;
+    height: 140px;
+  }
 }
 .card-big .card-image {
   width: 100%;
@@ -559,7 +583,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente para destacar os elementos */
+  background: rgba(0, 0, 0, 0.3);
   flex-direction: column;
 }
 .card-big .card-overlay .card-content {
@@ -1806,12 +1830,11 @@ option {
   cursor: pointer;
   height: 48px;
   width: 56px;
-  background-image: url("../svg/icon-search.svg");
+  background-image: url("../src/assets/svg/icon-search.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #10141e;
   border: 0;
-  border-radius: 4px;
   transform: translate3d(6px, 0, 0);
 }
 
@@ -1823,6 +1846,10 @@ option {
 
 .search-bar.active {
   border-bottom: 1px solid #5a698f;
+}
+
+.border-off {
+  border: 0 !important;
 }
 
 .btn {
