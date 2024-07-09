@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import CardXl from "../../components/CardXl";
+import CardXl from "../../components/Cards/CardXl";
+import CardMd from "../../components/Cards/CardMd";
 
 const Home = () => {
   const carouselRef = useRef(null);
@@ -56,6 +57,26 @@ const Home = () => {
             </div>
             <div className="grid-5 carousel-item">
               <CardXl />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container">
+        <div className="mt-4">
+          <h4>Recommended for you</h4>
+          <div>
+            <div className="grid-4">
+              <CardMd />
+            </div>
+            <div className="grid-4">
+              <CardMd />
+            </div>
+            <div className="grid-4">
+              <CardMd />
+            </div>
+            <div className="grid-4">
+              <CardMd />
             </div>
           </div>
         </div>
