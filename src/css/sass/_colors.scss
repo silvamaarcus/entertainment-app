@@ -18,6 +18,7 @@ $gray-4: #595a5c;
 $gray-5: #717274;
 $gray-6: #888a8c;
 $gray-7: #9ea0a3;
+$gray-8: #bec1c5;
 
 // Cores Auxiliares
 $red-normal: #f03d3d;
@@ -33,11 +34,11 @@ $yellow-dark: #d9b043;
 $yellow-light: #ffd76b;
 
 .color-black {
-  color: $black-10;
+  color: $black-10 !important;
 }
 
 .color-white {
-  color: $white;
+  color: $white !important;
 }
 
 .color-primary {
@@ -45,7 +46,7 @@ $yellow-light: #ffd76b;
 }
 
 .color-gray {
-  color: $gray-5;
+  color: $gray-8 !important;
 }
 
 .color-red {

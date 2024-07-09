@@ -316,7 +316,10 @@ p {
 
 .bold {
   font-weight: bold;
-  color: $white;
+}
+
+.semi-bold {
+  font-weight: 500;
 }
 
 span {
