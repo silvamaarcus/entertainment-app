@@ -1,12 +1,12 @@
 // Imagens
-import logo from "../../assets/svg/logo.svg";
-import user from "../../assets/img/user.png";
+import logo from "/assets/svg/logo.svg";
+import user from "/assets/img/user.png";
 
 // Icons
-import icon_main from "../../assets/svg/icon-main.svg";
-import icon_movies from "../../assets/svg/icon-movies.svg";
-import icon_series from "../../assets/svg/icon-series.svg";
-import icon_bookmark from "../../assets/svg/icon-bookmark.svg";
+import icon_main from "/assets/svg/icon-main.svg";
+import icon_movies from "/assets/svg/icon-movies.svg";
+import icon_series from "/assets/svg/icon-series.svg";
+import icon_bookmark from "/assets/svg/icon-bookmark.svg";
 
 // Hooks
 import { useState } from "react";

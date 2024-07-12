@@ -37,12 +37,13 @@ const Home = () => {
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(windowWidth);
-      if (windowWidth < 620) {
+      if (windowWidth <= 800 && windowWidth > 620) {
+        setClassMobile("grid-nobreak-4");
+      } else if (windowWidth <= 620) {
         setClassMobile("grid-nobreak-6");
-        console.log(windowWidth)
       } else {
         setClassMobile("grid-3");
-      }
+      }   
     };
 
     window.addEventListener("resize", handleResize);

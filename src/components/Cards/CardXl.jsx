@@ -1,5 +1,5 @@
-import cover from "../../assets/img/cover-movie.png";
-import bookmark_save from "../../assets/svg/bookmark.svg"
+import cover from "/assets/img/cover-movie.png";
+import bookmark_save from "/assets/svg/bookmark.svg"
 
 const CardXl = () => {
   return (

@@ -1,5 +1,5 @@
-import cover from "../../assets/img/cover-movie.png";
-import bookmark_save from "../../assets/svg/bookmark.svg";
+import cover from "/assets/img/cover-movie.png";
+import bookmark_save from "/assets/svg/bookmark.svg";
 
 const CardMd = () => {
   return (
@@ -25,7 +25,7 @@ const CardMd = () => {
           <p>|</p>
           <p>PG</p>
         </span>
-        <h6>The Great Lands</h6>
+        <h6 className="bold">The Great Lands</h6>
       </div>
     </>
   );
