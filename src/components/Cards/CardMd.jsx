@@ -4,7 +4,7 @@ import bookmark_save from "../../assets/svg/bookmark.svg";
 const CardMd = () => {
   return (
     <>
-      <div className="card-medium">
+      <div className="card-medium w-100">
         <div
           className="card-image-md"
           style={{ backgroundImage: `url(${cover})` }}

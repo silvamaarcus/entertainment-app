@@ -1,8 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import CardXl from "../../components/Cards/CardXl";
 import CardMd from "../../components/Cards/CardMd";
 
 const Home = () => {
+  //* Criando carrosel para os cards
   const carouselRef = useRef(null);
 
   const handleMouseDown = (e) => {
@@ -26,6 +27,33 @@ const Home = () => {
     const walk = (x - carouselRef.current.startX) * 2; // Velocidade de rolagem
     carouselRef.current.scrollLeft = carouselRef.current.scrollLeft - walk;
   };
+
+  // ----//-----
+
+  //* Setando classe de responsividade para o mobile
+  const [classMobile, setClassMobile] = useState("grid-3");
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(windowWidth);
+      if (windowWidth < 620) {
+        setClassMobile("grid-nobreak-6");
+        console.log(windowWidth)
+      } else {
+        setClassMobile("grid-3");
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Executa a função uma vez na montagem para definir o estado inicial corretamente
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -66,16 +94,16 @@ const Home = () => {
         <div className="mt-4">
           <h4>Recommended for you</h4>
           <div>
-            <div className="grid-4">
+            <div className={classMobile}>
               <CardMd />
             </div>
-            <div className="grid-4">
+            <div className={classMobile}>
               <CardMd />
             </div>
-            <div className="grid-4">
+            <div className={classMobile}>
               <CardMd />
             </div>
-            <div className="grid-4">
+            <div className={classMobile}>
               <CardMd />
             </div>
           </div>
