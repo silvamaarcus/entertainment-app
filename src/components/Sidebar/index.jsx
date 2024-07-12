@@ -4,9 +4,13 @@ import user from "/assets/img/user.png";
 
 // Icons
 import icon_main from "/assets/svg/icon-main.svg";
+import icon_main_active from "/assets/svg/icon-main-active.svg";
 import icon_movies from "/assets/svg/icon-movies.svg";
+import icon_movies_active from "/assets/svg/icon-movies-active.svg";
 import icon_series from "/assets/svg/icon-series.svg";
+import icon_series_active from "/assets/svg/icon-series-active.svg";
 import icon_bookmark from "/assets/svg/icon-bookmark.svg";
+import icon_bookmark_active from "/assets/svg/icon-bookmark-active.svg";
 
 // Hooks
 import { useState } from "react";
@@ -21,8 +25,43 @@ const Sidebar = () => {
   //* Abrir e fechar links do menu
   const [activeContent, setActiveContent] = useState("home");
 
-  const handleContentChange = (id) => {
-    setActiveContent(id);
+  //* Estado dos ícones
+  const [activeIcons, setActiveIcons] = useState({
+    home: icon_main_active,
+    movies: icon_movies,
+    series: icon_series,
+    bookmark: icon_bookmark,
+  });
+
+  const handleContentChange = (content) => {
+    setActiveContent(content);
+
+    const updatedIcons = {
+      home: icon_main,
+      movies: icon_movies,
+      series: icon_series,
+      bookmark: icon_bookmark,
+    };
+
+    // Definir a chave do ícone ativo com base no conteúdo
+    switch (content) {
+      case "home":
+        updatedIcons.home = icon_main_active;
+        break;
+      case "movies":
+        updatedIcons.movies = icon_movies_active;
+        break;
+      case "series":
+        updatedIcons.series = icon_series_active;
+        break;
+      case "bookmark":
+        updatedIcons.bookmark = icon_bookmark_active;
+        break;
+      default:
+        break;
+    }
+
+    setActiveIcons(updatedIcons);
   };
 
   return (
@@ -36,16 +75,16 @@ const Sidebar = () => {
           </div>
           <div className="flex-center-column gap-3 links">
             <a onClick={() => handleContentChange("home")}>
-              <img src={icon_main} alt="Home" />
+              <img src={activeIcons.home} alt="Home" />
             </a>
             <a onClick={() => handleContentChange("movies")}>
-              <img src={icon_movies} alt="Movies" />
+              <img src={activeIcons.movies} alt="Movies" />
             </a>
             <a onClick={() => handleContentChange("series")}>
-              <img src={icon_series} alt="Series" />
+              <img src={activeIcons.series} alt="Series" />
             </a>
             <a onClick={() => handleContentChange("bookmark")}>
-              <img src={icon_bookmark} alt="Bookmark" />
+              <img src={activeIcons.bookmark} alt="Bookmark" />
             </a>
           </div>
           <div className="profile">
@@ -83,4 +122,5 @@ const Sidebar = () => {
     </>
   );
 };
+
 export default Sidebar;
