@@ -85,7 +85,7 @@ $gutter: 32px;
 
 // Estrutura de container para aplicar na página.
 .container {
-  max-width: $container-l; // Definindo tamanho padrão para container.
+  max-width: $container-xl; // Definindo tamanho padrão para container.
   margin: 0 auto; // Centralizando container.
 
   // padding: 128px 24px; // Espaçamento-> eixo y: 128px - eixo x: 24px.
@@ -399,82 +399,3 @@ $gutter: 32px;
     border-radius: 0;
   }
 }
-
-// Carousel Trending
-.carousel-container {
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos móveis */
-  cursor: grab;
-  scrollbar-width: none; /* Para navegadores Firefox */
-  -ms-overflow-style: none; /* Para navegadores Internet Explorer e Edge */
-  scroll-behavior: smooth; /* Rola suavemente */
-
-  .carousel-item {
-    scroll-snap-align: start;
-  }
-}
-.carousel-container::-webkit-scrollbar {
-  display: none;
-}
-
-// Card Big - Trending
-
-.card-big {
-  width: 470px;
-  height: 230px;
-  border-radius: 8px;
-  overflow: hidden;
-  // margin: 20px;
-  display: flex;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-
-  @include responsive(s) {
-    width: 240px;
-    height: 140px;
-  }
-
-  .card-image {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-
-  .card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    // display: flex;
-    // align-items: flex-end;
-    flex-direction: column;
-
-    .card-content {
-      padding: 10px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-  }
-}
-
-.card-medium {
-  // max-width: 280px;
-  // height: 226px;
-  .card-image-md {
-    width: 100%;
-    height: 110px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    border-radius: 8px;
-  }
-}
-

@@ -1,11 +1,11 @@
-import Sidebar from "./components/Sidebar";
-// import Login from "./pages/Login";
+// import Sidebar from "./components/Sidebar";
+import Paths from "./Paths";
 
 function App() {
   return (
     <>
-      <Sidebar />
-      {/* <Login /> */}
+      <Paths />
+      {/* <Sidebar /> */}
     </>
   );
 }
