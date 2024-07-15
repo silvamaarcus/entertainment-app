@@ -186,6 +186,18 @@ $gutter: 32px;
     //align-items: flex-start;
   }
 }
+.flex-space-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  // Aplicar reponsividade.
+  @include responsive(s) {
+    //flex-direction: column;
+    //align-items: flex-start;
+  }
+}
 
 .flex-between {
   display: flex;
@@ -398,4 +410,17 @@ $gutter: 32px;
   @include responsive(s) {
     border-radius: 0;
   }
+}
+
+// Cards
+
+// Card - Big
+.card-l {
+  height: 230px;
+}
+
+.card-img {
+  z-index: -1;
+  border-radius: 8px;
+  height: 100%;
 }

@@ -357,6 +357,12 @@
   align-items: center;
   flex-direction: row;
 }
+.flex-space-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
 .flex-between {
   display: flex;
   justify-content: space-between;
@@ -539,6 +545,16 @@
   .bg-black-20 {
     border-radius: 0;
   }
+}
+
+.card-l {
+  height: 230px;
+}
+
+.card-img {
+  z-index: -1;
+  border-radius: 8px;
+  height: 100%;
 }
 
 .s-0 {
