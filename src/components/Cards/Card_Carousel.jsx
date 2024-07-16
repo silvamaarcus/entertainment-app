@@ -34,21 +34,21 @@ const Card_Carousel = () => {
     <>
       <div className="card-l">
         <div className="card-img" style={{ backgroundImage: `url(${cover})` }}>
-          <div className="flex-space-column card-content p-3">
-            <div className="w-100 border">
+          <div className="flex-space-column card-content p-3 h-100p">
+            <div className="w-100 border h-50">
               <div className="flex-end-row">
                 <p>M</p>
               </div>
             </div>
-            <div className="w-100 border">
-              <span className="flex-start-row gap-1">
+            <div className="w-100 border h-50">
+              <span className="flex-start-row gap-1 mt-3">
                 <p>2021</p>
                 <p>|</p>
                 <p>Movie</p>
                 <p>|</p>
                 <p>PG</p>
               </span>
-              <h5>Nome filme</h5>
+              <h6>Nome filme</h6>
             </div>
           </div>
         </div>

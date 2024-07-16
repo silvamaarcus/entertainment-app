@@ -18,8 +18,12 @@ const Home = () => {
               <div className="grid-5">
                 <Card_Carousel />
               </div>
-              <div className="grid-5 border"></div>
-              <div className="grid-2 border"></div>
+              <div className="grid-5">
+                <Card_Carousel />
+              </div>
+              <div className="grid-2">
+                <Card_Carousel />
+              </div>
             </div>
           </div>
         </div>
