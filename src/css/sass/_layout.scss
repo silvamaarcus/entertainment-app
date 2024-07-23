@@ -8,7 +8,7 @@ $container-s: 620px;
 $container-xs: 340px;
 
 // Espaçamento padrão entre colunas.
-$gutter: 32px;
+$gutter: 30px;
 
 // Mixin - Definindo responsividade através de funções, de forma automática.
 
@@ -113,7 +113,7 @@ $gutter: 32px;
 
 .hidden {
   // Evitar scroll para o lado, caso algum filho vaze o container.
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .zindex-1 {
@@ -258,18 +258,25 @@ $gutter: 32px;
 // Larguras e Alturas
 
 // Altura automática p/ o elemento.
-.h-100 {
+.h-100vh {
   height: 100vh;
 }
 
-.h-100p {
+.h-100 {
   height: 100%;
+}
+
+.h-75 {
+  height: 75%;
 }
 
 .h-auto {
   height: auto !important;
 }
 // Largura automática p/ o elemento.
+.w-100vw {
+  width: 100vw;
+}
 .w-auto {
   width: auto;
 }
@@ -355,17 +362,17 @@ $gutter: 32px;
   border-radius: 50%;
   border: 2px solid $brand-color;
 }
-.card {
-  border: 1px solid $black-30;
-  border-radius: 4px;
-  background-color: rgba(15, 20, 31, 0);
+// .card {
+//   border: 1px solid $black-30;
+//   border-radius: 4px;
+//   background-color: rgba(15, 20, 31, 0);
 
-  transition: 0.2s ease;
+//   transition: 0.2s ease;
 
-  &:hover {
-    background-color: rgba(15, 20, 31, 0.2);
-  }
-}
+//   &:hover {
+//     background-color: rgba(15, 20, 31, 0.2);
+//   }
+// }
 
 .bg-section {
   background-color: rgba(15, 20, 31, 0.5);
@@ -416,15 +423,46 @@ $gutter: 32px;
 
 // Card - Big
 .card-l {
+  width: 470px;
   height: 230px;
+
+  @include responsive(s) {
+    width: 240px;
+    height: 140px;
+  }
 }
 
 .card-img {
   z-index: -1;
   border-radius: 8px;
   height: 100%;
+  width: 100%;
 }
 
 .h-50 {
-height: 50%;
+  height: 50%;
 }
+
+// Home
+
+// Carousel
+.cards-carousel {
+  overflow-x: scroll !important;
+  cursor: grab;
+  white-space: nowrap; // Adiciona rolagem horizontal
+  scroll-snap-type: x mandatory; // Habilita o comportamento de snap
+
+  &::-webkit-scrollbar {
+    width: 20px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $black-30;
+  }
+}
+// .cards-carousel::-webkit-scrollbar {
+//   //* Esconder barra de rolagem em navegadores:
+//   // display: block; /* Chrome, Safari, Opera */
+//   scrollbar-color: transparent;
+// }

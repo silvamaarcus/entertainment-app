@@ -1,4 +1,5 @@
-import Card_Carousel from "../../components/Cards/Card_Carousel";
+import CardBig from "../../components/Cards/CardBig";
+import InputSearch from "../../components/InputSearch";
 import Sidebar from "../../components/Sidebar";
 
 const Home = () => {
@@ -6,24 +7,20 @@ const Home = () => {
     <>
       <section className="flex change-direction">
         <Sidebar />
-
-        <div className="mt-3 mr-4 w-100 border">
-          <div className="flex gap-1">
-            <div className="btn-search"></div>
-            <input type="text" placeholder="Search for movies" />
-          </div>
-          <div className="mt-4">
-            <h4>Trending</h4>
-            <div>
-              <div className="grid-5">
-                <Card_Carousel />
-              </div>
-              <div className="grid-5">
-                <Card_Carousel />
-              </div>
-              <div className="grid-2">
-                <Card_Carousel />
-              </div>
+        <div className="container w-100 flex flex-column gap-4 mt-4 hidden ">
+          <InputSearch />
+          <div className="flex gap-3 cards-carousel mr-1">
+            <div className="card">
+              <CardBig />
+            </div>
+            <div className="card">
+              <CardBig />
+            </div>
+            <div className="card">
+              <CardBig />
+            </div>
+            <div className="card">
+              <CardBig />
             </div>
           </div>
         </div>

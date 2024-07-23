@@ -29,18 +29,18 @@
 
 import cover from "/assets/img/cover-movie.png";
 
-const Card_Carousel = () => {
+const CardBig = () => {
   return (
     <>
       <div className="card-l">
         <div className="card-img" style={{ backgroundImage: `url(${cover})` }}>
-          <div className="flex-space-column card-content p-3 h-100p">
-            <div className="w-100 border h-50">
+          <div className="flex-space-column card-content p-3 h-100">
+            <div className="w-100 h-50">
               <div className="flex-end-row">
                 <p>M</p>
               </div>
             </div>
-            <div className="w-100 border h-50">
+            <div className="w-100 h-50">
               <span className="flex-start-row gap-1 mt-3">
                 <p>2021</p>
                 <p>|</p>
@@ -56,4 +56,4 @@ const Card_Carousel = () => {
     </>
   );
 };
-export default Card_Carousel;
+export default CardBig;
